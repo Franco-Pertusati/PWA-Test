@@ -1,0 +1,21 @@
+button {
+  padding: 12px;
+}
+
+.hideTxt {
+  padding: 2px;
+}
+
+.notiCount {
+  padding: 0 4px;
+  width: fit-content;
+  min-width: 18px;
+  height: 18px;
+  border-radius: 99px;
+  background-color: var(--red);
+  position: absolute;
+  top: -9px;
+  right: -9px;
+  color: var(--bg);
+  font-size: 1.4rem;
+}

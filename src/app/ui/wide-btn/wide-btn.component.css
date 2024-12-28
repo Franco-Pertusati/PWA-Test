@@ -1,0 +1,21 @@
+button {
+    width: 100%;
+    padding: 12px;
+    justify-content: space-between;
+    background-color: var(--bg);
+    border: solid 1px var(--border);
+}
+
+.textCont {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+}
+
+span {
+    font-weight: 600;
+}
+
+small {
+    white-space: nowrap;
+}

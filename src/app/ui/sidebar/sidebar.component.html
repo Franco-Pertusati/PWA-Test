@@ -1,0 +1,51 @@
+<div class="sidebar">
+  <div>
+    <h1>El Despa</h1>
+    <span class="softTxt">Turno cerrado desde: 12/04</span>
+  </div>
+  <br />
+  <button class="ignitionBtn">
+    <span>Start shift</span>
+    <i class="material-icons-round">
+      arrow_forward
+    </i>
+  </button>
+  <br />
+  <span class="softTxt">HOME</span>
+  @for (b of homeBtns; track $index) {
+  <app-generic-btn
+    [active]="b.active"
+    [rounded]="true"
+    [icon]="b.icon"
+    [wfull]="true"
+  >
+    {{ b.label }}
+  </app-generic-btn>
+  }
+  <br />
+  <span class="softTxt">ACTIONS</span>
+  @for (b of hotKeyBtns; track $index) {
+  <app-generic-btn
+    [active]="b.active"
+    [rounded]="true"
+    [icon]="b.icon"
+    [wfull]="true"
+  >
+    {{ b.label }}
+  </app-generic-btn>
+  }
+  <div class="wfull accountInfo">
+    <span>Unlock full version</span>
+    <div class="flex" style="gap: 0;">
+      <app-generic-btn [wfull]="true" [rounded]="true" [enfasis]="true"
+        >Try the free trial</app-generic-btn
+      >
+      <app-generic-btn
+        [rounded]="true"
+        [enfasis]="true"
+        [showTxt]="false"
+        [icon]="'open_in_new'"
+      />
+    </div>
+  </div>
+</div>
