@@ -1,0 +1,18 @@
+<button [ngClass]="{
+    active: active,
+    background: background
+  }" [routerLink]="destination">
+  @if (icon) {
+  <i class="material-icons-round">
+    {{ icon }}
+  </i>
+  }
+  <span>
+    <ng-content />
+  </span>
+  @if (notifications) {
+  <span class="notiCount">
+    {{ notifications }}
+  </span>
+  }
+</button>

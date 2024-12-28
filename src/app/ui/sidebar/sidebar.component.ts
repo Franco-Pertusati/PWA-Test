@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { GenericBtnComponent } from '../generic-btn/generic-btn.component';
+import { NavigationEnd, Router } from '@angular/router';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-sidebar',
@@ -15,49 +17,72 @@ export class SidebarComponent {
       icon: 'grid_view',
       label: 'Dashboard',
       active: false,
+      destination: 'dashboard',
     },
     {
       icon: 'point_of_sale',
-      label: 'POS Magnament',
+      label: 'Point of sale',
       active: false,
+      destination: 'point-of-sale',
     },
     {
       icon: 'table_restaurant',
       label: 'Restaurant',
       active: false,
+      destination: 'restaurant',
     },
     {
       icon: 'restaurant',
-      label: 'Restaurant',
+      label: 'Menu',
       active: false,
+      destination: 'menu',
     },
     {
       icon: 'work',
       label: 'Shifts',
       active: false,
-    }
+      destination: 'shifts',
+    },
+    {
+      icon: 'equalizer',
+      label: 'Stats',
+      active: false,
+      destination: 'stats',
+    },
+    {
+      icon: 'settings',
+      label: 'Settings',
+      active: false,
+      destination: 'settings',
+    },
   ];
 
-  hotKeyBtns = [
-    {
-      icon: 'shopping_cart',
-      label: 'Sell now',
-      active: false,
-    },
-    {
-      icon: 'swap_horiz',
-      label: 'Move table',
-      active: false,
-    },
-    {
-      icon: 'swap_horiz',
-      label: 'Move items',
-      active: false,
-    },
-    {
-      icon: 'close',
-      label: 'Close all tables',
-      active: false,
-    },
-  ];
+  constructor(public router: Router) {}
+
+
+  ngOnInit(): void {
+    // Escucha eventos de navegación
+    this.router.events
+      .pipe(filter(event => event instanceof NavigationEnd))
+      .subscribe(() => {
+        this.btnManagement();
+      });
+
+    // Configura los botones al iniciar
+    this.btnManagement();
+  }
+
+  btnManagement(): void {
+    const url = this.router.url.split('/').pop();
+    const btn = this.homeBtns.find(b => b.destination === url);
+
+    if (btn) {
+      btn.active = true;
+      this.homeBtns.forEach(b => {
+        if (b.destination !== url) {
+          b.active = false;
+        }
+      });
+    }
+  }
 }
