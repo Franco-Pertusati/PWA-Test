@@ -14,14 +14,14 @@ import { filter } from 'rxjs';
 export class SidebarComponent {
   homeBtns = [
     {
-      icon: 'grid_view',
+      icon: 'home',
       label: 'Dashboard',
       active: false,
       destination: 'dashboard',
     },
     {
-      icon: 'point_of_sale',
-      label: 'Point of sale',
+      icon: 'notifications',
+      label: 'Notifications',
       active: false,
       destination: 'point-of-sale',
     },
