@@ -12,10 +12,12 @@ import { RouterLink } from '@angular/router';
 export class GenericBtnComponent {
   @Input() icon: string | null = null;
   @Input() showTxt: boolean = true;
-  @Input() destination: string | null = null;
+  @Input() destination: string | undefined = undefined;
   @Input() notifications: number = 0;
   @Input() enfasis: boolean = false;
-  @Input() rounded: boolean = false;
+  @Input() rounded: boolean = true;
   @Input() wfull: boolean = false;
   @Input() active: boolean = false;
+  @Input() accent: boolean = false;
+  @Input() outline: boolean = false;
 }

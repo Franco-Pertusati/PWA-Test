@@ -1,3 +1,6 @@
 <nav>
-    <ng-content></ng-content>
+  @for (b of buttons; track $index) {
+  <app-generic-btn (click)="btnManagement()" [active]="b.active" [icon]="b.icon" [enfasis]="false"
+    [destination]="b.destination">{{b.label}}</app-generic-btn>
+  }
 </nav>

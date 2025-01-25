@@ -1,12 +1,29 @@
-:root {
-  --bg: #f8f9faff;
-  --bg2: #e9ecefff;
-  --border: #dee2e6ff;
+.light {
+  --bg: #f8f9fa;
+  --bg2: #e9ecef;
+  --border: #dee2e6;
   --dark: #343a40;
-  --font: #212529ff;
+  --font: #212529;
   --font2: #4e565f;
-  --main: #f16845;
+  --main: #ff8f72;
   --hover: #ffe0c2;
+  --accent: #b5cb9b;
+
+  --blue: #2bc0ff;
+  --red: #ff302c;
+  --green: #80e73b;
+}
+
+.dark {
+  --bg: #212529;
+  --bg2: #343a40;
+  --border: #4e565f;
+  --dark: #e9ecef;
+  --font: #f8f9fa;
+  --font2: #dee2e6;
+  --main: #ff5328;
+  --hover: #4e565f;
+  --accent: #b5cb9b;
 
   --blue: #2bc0ff;
   --red: #ff302c;
@@ -17,7 +34,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: 'poppins', "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   color: var(--font);
   font-size: 62.5%;
 }
@@ -33,16 +50,13 @@
   background-color: var(--bg2);
   position: relative;
   display: flex;
-  gap: 12px;
+  gap: 24px;
 }
 
 .pageContainer {
   width: 100%;
   height: 100%;
-  padding: 24px;
   overflow-y: auto;
-  background-color: var(--bg);
-  border-radius: 24px;
 }
 
 .winCol {
@@ -61,7 +75,24 @@
 .winBg {
   padding: 12px;
   background-color: var(--bg);
-  border-radius: 12px;
+  border-radius: 35px;
+}
+
+.wsm {
+  width: 320px;
+}
+
+.wmd {
+  width: 408px;
+}
+
+.wlg {
+  width: 660px;
+}
+
+.center {
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .flex {
@@ -74,13 +105,21 @@
   gap: 6px;
 }
 
+.pageTitle {
+  margin: 32px 0;
+}
+
 h1,
 h2,
 h3,
-h4,
 h5,
 h6 {
   font-size: 3rem;
+}
+
+h4 {
+  font-size: 3rem;
+  font-weight: 600;
 }
 
 h2 {
@@ -91,6 +130,10 @@ h2 {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.mAuto {
+  margin: 0 auto;
 }
 
 ul,
@@ -135,13 +178,13 @@ a {
   align-items: center;
   border-radius: 4px;
   cursor: pointer;
-  background-color: transparent;
+  background-color: var(--bg);
   position: relative;
 }
 
 button:hover,
 a:hover {
-  background-color: var(--hover);
+  background-color: var(--bg2);
 }
 
 .wFit {
@@ -152,16 +195,20 @@ a:hover {
   width: 100%;
 }
 
-.w200 {
-  width: 200px;
+.hFull {
+  height: 100%;
 }
 
-.w300 {
-  width: 3200px;
+.p18 {
+  padding: 18px;
 }
 
-.w620 {
-  width: 620px;
+input {
+  background-color: transparent;
+}
+
+input:focus {
+  outline: none;
 }
 
 .material-icons-round {
@@ -176,28 +223,23 @@ a:hover {
   border-radius: 99px;
 }
 
-.enfasis {
-  background-color: var(--main);
-}
-
-.enfasis span, .enfasis i {
-  color: var(--bg);
-}
-
-.enfasis:hover {
-  background-color: var(--main);
+.outline {
+  border: solid 1px var(--font);
 }
 
 .active {
-  background-color: var(--main);
-}
-
-.active span,
-.active .material-icons-round {
-  color: var(--bg);
+  background-color: var(--border);
 }
 
 .active:hover {
+  background-color: var(--border);
+}
+
+.accent {
+  background-color: var(--main);
+}
+
+.accent:hover {
   background-color: var(--main);
 }
 
@@ -209,6 +251,7 @@ a:hover {
   margin: 0 auto;
 }
 
-.pageTitleContainer {
-  margin-bottom: 24px;
+hr {
+  height: 32px;
+  border-style: none;
 }

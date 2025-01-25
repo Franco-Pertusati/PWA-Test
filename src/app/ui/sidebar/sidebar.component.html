@@ -1,22 +1,22 @@
-<div class="sidebar">
+<div class="sidebar" [ngClass]="isOpen? '' : 'isClosed'">
   <div class="pageTitleContainer">
-    <h1>PWA-Test</h1>
+    <div class="logoContainer">
+      @if (isOpen) {
+      <h1>Logo</h1>
+      }
+      <app-generic-btn (click)="isOpen = !isOpen" [icon]="'first_page'" [showTxt]="false" [rounded]="true"/>
+    </div>
   </div>
   @for (b of homeBtns; track $index) {
-  <app-generic-btn
-    [active]="b.active"
-    [rounded]="true"
-    [icon]="b.icon"
-    [wfull]="true"
-    [destination]="b.destination"
-    (click)="btnManagement()"
-  >
+  <app-generic-btn [active]="b.active" [rounded]="true" [icon]="b.icon" [wfull]="true" [destination]="b.destination"
+    [showTxt]="isOpen" (click)="btnManagement()">
     {{ b.label }}
   </app-generic-btn>
   }
-  <br />
-  <div class="wfull accountInfo">
-    <span>JuanPerezMail.com</span>
-    <app-generic-btn [icon]="'logout'" [rounded]="true" [enfasis]="true" [showTxt]="false"/>
+  <div class="accountInfo">
+    <app-generic-btn [rounded]="true" [icon]="'contrast'" [wfull]="true" [showTxt]="isOpen" (click)="toggleTheme()">Theme</app-generic-btn>
+    <app-generic-btn   [icon]="'person'" [rounded]="true" [wfull]="true" [showTxt]="isOpen">
+      jperez120&#x40;Mail.com
+    </app-generic-btn>
   </div>
 </div>

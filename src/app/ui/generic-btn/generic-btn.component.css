@@ -1,5 +1,8 @@
 button {
+  min-width: 46px;
+  height: 46px;
   padding: 12px;
+  text-wrap-mode: nowrap;
 }
 
 .hideTxt {
@@ -18,4 +21,8 @@ button {
   right: -9px;
   color: var(--bg);
   font-size: 1.4rem;
+}
+
+i {
+  font-size: 2.2rem;
 }

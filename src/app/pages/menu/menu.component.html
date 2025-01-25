@@ -1,5 +1,10 @@
-<div class="winCol">
-  <div>
-    <h2>Menu</h2>
+<div class="winCol hFull wFull">
+  <div class="mAuto">
+    <div class="winBg">
+      <app-navbar [buttons]="navBar" />
+    </div>
+  </div>
+  <div class="hFull wFull">
+    <router-outlet></router-outlet>
   </div>
 </div>

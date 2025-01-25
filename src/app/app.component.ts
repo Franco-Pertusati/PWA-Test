@@ -5,21 +5,16 @@ import { InputWithIconComponent } from './ui/input-with-icon/input-with-icon.com
 import { NavbarComponent } from './ui/navbar/navbar.component';
 import { SidebarComponent } from './ui/sidebar/sidebar.component';
 import { WideBtnComponent } from './ui/wide-btn/wide-btn.component';
+import { ThemeService } from './services/theme.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
     RouterOutlet,
-    GenericBtnComponent,
-    InputWithIconComponent,
-    NavbarComponent,
     SidebarComponent,
-    WideBtnComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
-export class AppComponent {
-  title = 'boilerPlate';
-}
+export class AppComponent {}
