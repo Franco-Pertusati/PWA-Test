@@ -1,7 +1,9 @@
-<div class="winCol hFull wFull">
-  <div class="mAuto">
-    <div class="winBg">
-      <app-navbar [buttons]="navBar" />
+<div class="winCol hFull wFit center">
+  <div class="mAuto wFull">
+    <div class="winBg wFull">
+      <app-navbar [buttons]="navBar">
+        <app-generic-btn [icon]="'upload'" [accent]="true">Load file</app-generic-btn>
+      </app-navbar>
     </div>
   </div>
   <div class="hFull wFull">

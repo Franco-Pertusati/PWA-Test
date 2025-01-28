@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { SidebarComponent } from './ui/sidebar/sidebar.component';
-import { PushNotificationService } from './services/notification-push.service';
 
 @Component({
   selector: 'app-root',
@@ -11,9 +10,6 @@ import { PushNotificationService } from './services/notification-push.service';
   styleUrl: './app.component.css',
 })
 export class AppComponent {
-  pushService = inject(PushNotificationService);
 
-  constructor() {
-    this.pushService.listenToPushNotifications();
-  }
+  constructor() {}
 }

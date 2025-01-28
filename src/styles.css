@@ -1,12 +1,13 @@
 .light {
   --bg: #f8f9fa;
   --bg2: #e9ecef;
+
   --border: #dee2e6;
-  --dark: #343a40;
+  --hover: #EFF2F5;
+
   --font: #212529;
   --font2: #4e565f;
   --main: #ff8f72;
-  --hover: #ffe0c2;
   --accent: #b5cb9b;
 
   --blue: #2bc0ff;
@@ -17,12 +18,13 @@
 .dark {
   --bg: #212529;
   --bg2: #343a40;
-  --border: #4e565f;
-  --dark: #e9ecef;
+
+  --border: #1d2125;
+  --hover: #282E32;
+
   --font: #f8f9fa;
   --font2: #dee2e6;
   --main: #ff5328;
-  --hover: #4e565f;
   --accent: #b5cb9b;
 
   --blue: #2bc0ff;
@@ -184,7 +186,7 @@ a {
 
 button:hover,
 a:hover {
-  background-color: var(--bg2);
+  background-color: var(--hover);
 }
 
 .wFit {
@@ -228,11 +230,11 @@ input:focus {
 }
 
 .active {
-  background-color: var(--border);
+  background-color: var(--bg2);
 }
 
 .active:hover {
-  background-color: var(--border);
+  background-color: var(--bg2);
 }
 
 .accent {
@@ -254,4 +256,10 @@ input:focus {
 hr {
   height: 32px;
   border-style: none;
+}
+
+.mat-mdc-dialog-surface {
+  padding: 12px !important;
+  background-color: var(--bg) !important;
+  border-radius: 12px !important;
 }

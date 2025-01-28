@@ -29,9 +29,7 @@ export class ThemeService {
     if (savedTheme) {
       this.setTheme(savedTheme);
     } else {
-      console.log('savedTheme: ' + savedTheme);
       this.setTheme(this.currentTheme);
     }
-    console.log(this.currentTheme);
   }
 }

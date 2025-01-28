@@ -1,11 +1,14 @@
-<div class="flex" [ngClass]="rounded? '' : 'squareInp'">
-  @if (icon) {
-  <i class="material-icons-round">{{icon}}</i>
-  }
-  <input [placeholder]="placeholder" type="text">
-  @if (clearBtn) {
-  <button>
-    <i class="material-icons-round">close</i>
-  </button>
-  }
+<div class="inputComponent" [ngClass]="rounded? '' : 'squareInp'">
+  @if (label) {<span>{{ label }}:</span>}
+  <div class="inpContainer">
+    @if (icon) {
+    <i class="material-icons-round">{{icon}}</i>
+    }
+    <ng-content />
+    @if (clearBtn) {
+    <button>
+      <i class="material-icons-round">close</i>
+    </button>
+    }
+  </div>
 </div>

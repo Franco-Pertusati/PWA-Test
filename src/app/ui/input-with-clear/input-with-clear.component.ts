@@ -1,5 +1,5 @@
 import { NgClass } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-input-with-clear',
@@ -12,5 +12,6 @@ export class InputWithClearComponent {
   @Input() icon: string = '';
   @Input() clearBtn: Boolean = false;
   @Input() placeholder: string = '';
-  @Input() rounded: boolean = true;
+  @Input() rounded: boolean = false;
+  @Input() label: string = '';
 }

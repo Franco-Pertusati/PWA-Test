@@ -1,27 +1,22 @@
-div {
+.inputComponent {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.inpContainer {
   height: 46px;
-  padding: 0 16px;
   background-color: var(--bg2);
-  border-radius: 24px;
-  position: relative;
+  width: fit-content;
+  border-radius: 8px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 0 12px;
 }
 
-div:focus-within {
-  box-shadow: 0 2px 4px hsla(0, 0%, 0%, 0.2);
+.inpContainer:focus-within {
   background-color: var(--bg);
-}
-
-button {
-  background-color: transparent;
-  border-radius: 99px;
-  position: absolute;
-  right: 0;
-}
-
-button:hover {
-  background-color: var(--bg2);
-}
-
-.squareInp {
-  border-radius: 4px;
+  outline: solid 1px var(--border);
+  box-shadow: 0 4px 4px hsla(0, 0%, 0%, 0.3);
 }

@@ -1,0 +1,32 @@
+<div class="winCol">
+  <h3>Create product</h3>
+
+  <form [formGroup]="productForm">
+    <app-input-with-clear [label]="'Nombre'" [icon]="'sell'">
+      <input type="text" placeholder="Golden Pint" formControlName="name">
+    </app-input-with-clear>
+
+    <app-input-with-clear [label]="'Precio'" [icon]="'attach_money'">
+      <input type="text" placeholder="2.50" formControlName="price">
+    </app-input-with-clear>
+
+    <app-input-with-clear [label]="'Código'" [icon]="'fingerprint'">
+      <input type="text" placeholder="286" formControlName="code">
+    </app-input-with-clear>
+
+    <app-input-with-clear [label]="'Categoría'" [icon]="'category'">
+      <input type="text" placeholder="Pints" formControlName="category">
+    </app-input-with-clear>
+
+    <app-input-with-clear [label]="'Subcategoría'" [icon]="'category'">
+      <input type="text" placeholder="White beer" formControlName="subCategory">
+    </app-input-with-clear>
+
+    <br>
+
+    <div class="flex">
+      <app-generic-btn (click)="dialogRef.close()">Cancel</app-generic-btn>
+      <app-generic-btn [accent]="true" (click)="createProduct()">Create</app-generic-btn>
+    </div>
+  </form>
+</div>
