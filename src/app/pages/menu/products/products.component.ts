@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { GenericBtnComponent } from '../../../ui/generic-btn/generic-btn.component';
 import { NewProductDialogComponent } from './dialogs/new-product-dialog/new-product-dialog.component';
-import { MatDialog } from '@angular/material/dialog';
 import { NewCategoryDialogComponent } from './dialogs/new-category-dialog/new-category-dialog.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-products',

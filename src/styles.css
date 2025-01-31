@@ -103,6 +103,10 @@
   gap: 12px;
 }
 
+.jcBtw {
+  justify-content: space-between;
+}
+
 .gap6 {
   gap: 6px;
 }
